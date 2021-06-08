@@ -60,6 +60,13 @@ func main() {
 		fmt.Println("remaining change", bucket.GetCoins())
 		fmt.Println("remaining change total", toMoney(bucket.GetCoins()))
 	}
+
+	fmt.Println("vending machine receives 100000")
+
+	vendingMachine.ReceiveMoney(model.OneHundredThousand)
+
+	fmt.Println("cancel the request and receive a refund", vendingMachine.Refund())
+
 }
 
 func toMoney(coins map[model.Coin]int) int {
